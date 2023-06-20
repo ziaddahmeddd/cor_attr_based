@@ -7,7 +7,7 @@
         exit();
     }
 
-    $sql = "SELECT COUNT(*) FROM users";
+    $sql = "SELECT COUNT(*) FROM users15";
     $stmt= $pdo->prepare($sql);
     $stmt->execute();
     $userCount = $stmt->fetchColumn();
