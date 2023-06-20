@@ -1,0 +1,4 @@
+CREATE DATABASE cr_1;
+USE cr_1;
+CREATE TABLE users15 (id INT AUTO_INCREMENT PRIMARY KEY, username VARCHAR(50), password VARCHAR(255), gender VARCHAR(20), phone VARCHAR(20), department VARCHAR(50), role VARCHAR(50));
+EXIT;
