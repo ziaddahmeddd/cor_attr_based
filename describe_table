@@ -1,0 +1,6 @@
+| Department | Can Edit themselves   | Can Delete | Can View | Can Report a Problem | Can Edit Other Users |
+|------------|:-------------------- :|:----------:|:--------:|:--------------------:|:--------------------:|
+| Admin      |         Yes           |     Yes    |   Yes    |         No          |          Yes         |
+| Finance    |         Yes           |     No     |   Yes    |         Yes         |          No          |
+| HR         |         Yes           |     No     |   Yes    |         No          |          No          |
+-------------------------------------------------------------------------------------------------------------
