@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Finance Page</title>
+    <script>
+        function submitForm() {
+            var problem = document.getElementById('problem').value;
+            if (problem.trim() === '') {
+                alert('Please enter your problem.');
+            } else {
+                alert('Thank you! Your report has been submitted.\n\nProblem: ' + problem);
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Welcome to the Finance department!</h1>
+    <form id="financeForm" action="#" method="post">
+        <label for="problem">Problem:</label><br>
+        <textarea id="problem" name="problem" required></textarea><br>
+        <input type="button" value="Submit" onclick="submitForm()">
+    </form>
+    <br>
+    <a href="logout.php">Logout</a>
+</body>
+</html>

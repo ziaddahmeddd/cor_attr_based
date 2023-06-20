@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HR Page</title>
+</head>
+<body>
+    <h1>Welcome to the HR department!</h1>
+    <p>Total users in the system: <span id="userCount"></span></p>
+
+    <script>
+        // Fetch user count from the server
+        fetch('user_count.php')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('userCount').textContent = data;
+            })
+            .catch(error => console.error(error));
+    </script>
+    
+    <br>
+    <a href="logout.php">Logout</a>
+</body>
+</html>

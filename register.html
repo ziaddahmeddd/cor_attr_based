@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration Page</title>
+    </head>
+    <body>
+        <form action="register.php" method="post">
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username"><br>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password"><br>
+            <label for="role">Role:</label><br>
+            <input type="radio" id="admin" name="role" value="admin">
+            <label for="admin">Admin</label><br>
+            <input type="radio" id="user" name="role" value="user">
+            <label for="user">User</label><br>
+            <label for="department">Department:</label><br>
+            <input type="radio" id="HR" name="department" value="HR">
+            <label for="HR">HR</label><br>
+            <input type="radio" id="finance" name="department" value="finance">
+            <label for="finance">Finance</label><br>
+            <input type="submit" value="Register">
+        </form>
+    </body>
+</html>
