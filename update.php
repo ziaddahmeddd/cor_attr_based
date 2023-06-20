@@ -11,7 +11,6 @@ $message = '';
 
 $user = $_SESSION['user'];
 
-// If the form was submitted
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $newDepartment = $_POST['department'];
     $currentPassword = $_POST['current_password'];
@@ -27,14 +26,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $newDepartment = filter_var($newDepartment, FILTER_SANITIZE_STRING);
 
         if (password_verify($currentPassword, $user['password'])) {
-            // Hash the new password
+            
             $newPasswordHash = password_hash($newPassword, PASSWORD_DEFAULT);
 
-            // Update the user in the database using a prepared statement
+            
             $stmt = $pdo->prepare("UPDATE users15 SET department = ?, password = ? WHERE id = ?");
             $stmt->execute([$newDepartment, $newPasswordHash, $user['id']]);
 
-            // Update the user in the session
+            
             $_SESSION['user']['department'] = $newDepartment;
 
             $message = "Profile updated successfully.";
